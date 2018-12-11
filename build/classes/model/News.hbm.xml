@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping package="model">
+          
+          <class name="News" table="news">
+         	<id name="id">
+         		<generator class="native"></generator>
+         	</id>
+         	<property name="title"></property>	
+         	<property name="content"></property>	
+         	<property name="time"></property>
+         	<property name="userid"></property>
+         	<property name="userName"></property>
+         	
+         		
+         	<many-to-one name="user" column="usersid" class="User"></many-to-one>
+          </class>
+          
+</hibernate-mapping>
